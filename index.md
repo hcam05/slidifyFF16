@@ -10,7 +10,7 @@ widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 github:
-    user: hcam
+    user: hcam05
     repo: slidifyFF16
     
 ---
