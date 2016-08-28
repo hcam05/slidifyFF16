@@ -1,0 +1,7 @@
+name: Publish Document
+account: rpubs
+server: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/204788/b0324515dd8646c991d4c7cfe011ee26
+bundleId: https://api.rpubs.com/api/v1/document/204788/b0324515dd8646c991d4c7cfe011ee26
+url: http://rpubs.com/hcam/204788
+when: 1472413064.27249
