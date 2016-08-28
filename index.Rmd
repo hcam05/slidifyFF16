@@ -1,0 +1,52 @@
+---
+title       : Fantasy Football Rankings and Tiers
+subtitle    : version 0.01
+author      : hcam
+job         : Rn00b
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+github:
+    user: hcam
+    repo: slidifyFF16
+---
+
+## Fantasy Football Rankings and Tiers
+
+Welcome to the 2016 Fantasy Football Season. 
+
+Data is provided from borischen.co and fantasypros.com.
+
+
+--- .class #id 
+
+## Purpose
+
+In order to help with your draft this season.  We pulled the rankings and tiers from borischen.co and presented it in two tabs ("Top 200" and "By Position").  Feel free to use this to dominate your draft, and set your team up for sucess this season.  
+
+---
+
+## Prepping data
+
+```{r, echo = T, message = F}
+require(dplyr)
+dataurl <- "https://s3-us-west-1.amazonaws.com/fftiers/out/current/weekly-ALL.csv"
+ffdata <- read.csv(dataurl, stringsAsFactors = FALSE)
+ffdata$Pos <- gsub('[0-9]+', '', ffdata$Position) #creates new column for Position
+print(head(ffdata))
+```
+
+---
+
+## Using dplyr package to filter data.
+
+```{r, echo = T, message = F}
+head(filter(ffdata, Pos == "WR"))
+```
+# Good luck to all in your drafts this season! More updates to come!
+
+
+
